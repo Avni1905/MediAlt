@@ -30,9 +30,12 @@ body {
 }
 
 .logo img {
-    height: 30px; /* Reduced logo size */
-}
+    height: 40px; /* Reduced logo size */
 
+}
+.logo h1{
+    font-size:xx-large;
+}
 .header-content {
     display: flex;
     align-items: center;
