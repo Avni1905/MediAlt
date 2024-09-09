@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedAlt</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <h1><img src="images/logo.png" alt="MEDALT Logo"> MedAlt</h1>
-            
         </div>
         <nav class="nav">
             <ul>
@@ -51,10 +51,33 @@
         </div>
     </footer>
 
+    <!-- Pop-up Modal -->
+    <div id="welcome-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2>Welcome to MedAlt</h2>
+            <p>Your trusted resource for alternative medicine!</p>
+            <button id="close-popup" class="close-button">Get Started</button>
+        </div>
+    </div>
+
+    <!-- jQuery and Slick.js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="slick/slick.min.js"></script>
+
+    <!-- JavaScript/jQuery for pop-up and slider -->
     <script>
         $(document).ready(function(){
+            // Show the pop-up after a slight delay
+            setTimeout(function(){
+                $('#welcome-popup').addClass('show');
+            }, 500);
+
+            // Close the pop-up when clicking the "Get Started" button
+            $('#close-popup').on('click', function(){
+                $('#welcome-popup').removeClass('show');
+            });
+
+            // Image slider code
             $('.image-slider').slick({
                 dots: true,
                 infinite: true,
