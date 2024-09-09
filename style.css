@@ -5,7 +5,7 @@ body {
     background: #c2f3ee;
     color: #fff;
     display: flex;
-    flex-direction: column; /* Center content vertically */
+    flex-direction: column;
     min-height: 100vh;
     padding: 0;
 }
@@ -18,7 +18,7 @@ body {
     width: 100%;
     padding: 10px 5%; /* Reduced padding */
     box-sizing: border-box; /* Include padding in width */
-    background-color:#02695d;
+    background-color: #02695d;
     display: flex;
     justify-content: space-between; /* Space between logo and other items */
     align-items: center;
@@ -31,11 +31,12 @@ body {
 
 .logo img {
     height: 40px; /* Reduced logo size */
+}
 
+.logo h1 {
+    font-size: xx-large;
 }
-.logo h1{
-    font-size:xx-large;
-}
+
 .header-content {
     display: flex;
     align-items: center;
@@ -111,6 +112,7 @@ body {
 
 /* Container Styles */
 .container {
+    margin-top: 8%;
     max-width: 1200px;
     width: 90%;
     padding: 10px;
@@ -118,7 +120,7 @@ body {
     background: linear-gradient(135deg, #44b0a5 0%, #02695d 100%);
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-    margin-top: 120px; /* Increased space between header and container */
+   
     margin-left: auto; /* Center container horizontally */
     margin-right: auto;
 }
@@ -167,6 +169,7 @@ body {
     opacity: 0.8;
 }
 
+/* About Us Section */
 .about-us {
     display: flex;
     justify-content: space-between;
@@ -175,8 +178,8 @@ body {
     background-color: #e6f9f400;
     margin-top: 20px;
     border-radius: 10px;
+    flex-wrap: wrap; /* Allow content to wrap */
 }
-
 .about-text {
     flex: 1;
     padding: 20px;
@@ -199,7 +202,7 @@ body {
     border-radius: 20%;
     margin-right: 100px;
     border-color: #0d0e0d;
-   
+    margin-bottom: 5%;
 }
 
 .image-slider img {
@@ -221,7 +224,7 @@ body {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position:fixed;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -263,7 +266,6 @@ body {
     }
 
     .search-container {
-        margin-top: 10px; /* Space between search bar and nav items */
         margin-left: 10%;
     }
 
@@ -294,7 +296,7 @@ body {
     .container {
         width: 95%;
         padding: 8px;
-        margin-top: 100px; /* Adjusted margin-top for very small devices */
+        margin-top: 10%;
     }
 
     .main-content h1 {
@@ -309,4 +311,98 @@ body {
         padding: 8px 15px;
         font-size: 0.9rem;
     }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 8px;
+        margin-top: 20%;
+    }
+    .about-us {
+        flex-direction: column; /* Stack text and images vertically */
+        text-align: center; /* Center text and images */
+    }
+
+    .about-images {
+        margin: 20px 0; /* Add space between text and image */
+        width: 50%; /* Adjust image size to fit */
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us {
+        padding: 10px;
+    }
+
+    .about-text {
+        padding: 10px;
+    }
+}
+
+/* Health Schemes Section */
+.schemes-container {
+    padding: 150px 20px 20px; /* Space below header */
+}
+
+.schemes-container h1 {
+    text-align: center;
+    color: #00453E;
+}
+
+.schemes ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.schemes ul li {
+    margin: 10px;
+}
+
+.schemes ul li a {
+    text-decoration: none;
+    color: #edf5f4;
+    background-color: #00453E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.schemes ul li a:hover {
+    background-color: #44b0a5;
+    color: #00453E;
+}
+
+/* Description Section Styles */
+.description-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: #44b0a5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.description-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #00453E;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.description-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.description-text{
+    justify-content: center;
 }
